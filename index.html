@@ -13,9 +13,13 @@
 </td>
 </table>
 <script type="text/javascript">(function ( $ ) {
-	$( function () {
-		var $elm = $( '.mw-display-qrcode' );
-		$elm.qrcode( $elm.data( 'mw-qrcode-url' ) );
-	} );
+        $( function () {
+                var $elm = $( '.mw-display-qrcode' );
+                $elm.each( function () {
+                        var $i = $( this );
+                        $i.qrcode( $i.data( 'mw-qrcode-url' ) );
+                } );
+        } );
+
 } )( jQuery );
 </script>
